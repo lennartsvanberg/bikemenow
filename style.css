@@ -1,0 +1,167 @@
+:root {
+    --primary: #FF5F00; /* Racing Orange */
+    --dark: #121212;
+    --light: #f4f4f4;
+    --gray: #2a2a2a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+header {
+    padding: 2rem 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 10%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.collab {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.price-badge {
+    display: inline-block;
+    background: rgba(255, 95, 0, 0.1);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* AI Demo Box */
+.ai-demo {
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.demo-box {
+    background: var(--gray);
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.prompt-container {
+    background: #000;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #4AF626; /* Terminal Green */
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Form */
+.signup-section {
+    text-align: center;
+    padding: 6rem 5%;
+    background: linear-gradient(to bottom, var(--dark), #1a1a1a);
+}
+
+#waitlist-form {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="email"] {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    width: 300px;
+    font-size: 1rem;
+}
+
+.cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.hidden { display: none; }
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    #waitlist-form { flex-direction: column; align-items: center; }
+    input[type="email"] { width: 100%; }
+}
