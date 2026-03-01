@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeMe.Now | Framtidens Affärssystem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">BikeMe<span>.Now</span></div>
+            <a href="#signup" class="cta-button mini">Gå med i väntelistan</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Sveriges nya affärssystem för MC-Branschen - <span>BikeMe.Now</span></h1>
+            <p class="collab">I samarbete med <strong>AVA MC</strong></p>
+            <p class="description">
+                Vi bygger ett komplett affärssystem för dig som handlar, ger service och reparerar motorcyklar. 
+                Glöm krångliga menyer – styr din verksamhet med kraften av AI.
+            </p>
+            <div class="price-badge">Ca 50% billigare än konkurrenterna</div>
+        </section>
+
+        <section class="ai-demo">
+            <div class="demo-box">
+                <h3>Testa framtiden</h3>
+                <p>Istället för menyer, använd vanliga frågor:</p>
+                <div class="prompt-container">
+                    <span id="typed-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <div class="example-prompts">
+                    <span>"Hur mycket sålde vi för under januari 2026?"</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup" class="signup-section">
+            <h2>Lansering Maj 2026</h2>
+            <p>Säkra din plats på väntelistan idag eller kontakta oss på <a href="mailto:info@bikeme.now">info@bikeme.now</a></p>
+            <form id="waitlist-form">
+                <input type="email" placeholder="Din e-postadress" required>
+                <button type="submit" class="cta-button">Anmäl intresse</button>
+            </form>
+            <p id="form-msg" class="hidden">Tack! Vi hörs snart.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BikeMe.Now - Revolutionerar MC-branschen</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
