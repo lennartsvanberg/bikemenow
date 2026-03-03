@@ -12,7 +12,9 @@
 <body>
     <header>
         <nav>
-            <div class="logo">BikeMe<span>.Now</span></div>
+            <a href="#" class="logo-link">
+                <img src="bike-me-now-logo.png" alt="BikeMe.Now Logo" class="logo-img">
+            </a>
             <a href="#signup" class="cta-button mini">Gå med i väntelistan</a>
         </nav>
     </header>
@@ -45,11 +47,12 @@
         <section id="signup" class="signup-section">
             <h2>Lansering Maj 2026</h2>
             <p>Säkra din plats på väntelistan idag eller kontakta oss på <a href="mailto:info@bikeme.now">info@bikeme.now</a></p>
-            <form id="waitlist-form">
-                <input type="email" placeholder="Din e-postadress" required>
+            
+            <form id="waitlist-form" action="mailto:info@bikeme.now" method="post" enctype="text/plain">
+                <input type="email" name="Email_Address" placeholder="Din e-postadress" required>
                 <button type="submit" class="cta-button">Anmäl intresse</button>
             </form>
-            <p id="form-msg" class="hidden">Tack! Vi hörs snart.</p>
+            <p id="form-msg" class="hidden">Tack! Din e-postklient bör öppnas med ett förberett meddelande.</p>
         </section>
     </main>
 
