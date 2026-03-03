@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDeleting = false;
 
     function typeEffect() {
+        if (!textElement) return; // Basic error check
+
         const currentPrompt = prompts[promptIndex];
         
         if (isDeleting) {
@@ -38,13 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start the animation
     typeEffect();
 
-    // Form Handling
+    // Form Handling - Modified to allow default form action (mailto)
     const form = document.getElementById('waitlist-form');
     const msg = document.getElementById('form-msg');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        form.classList.add('hidden');
-        msg.classList.remove('hidden');
-    });
+    if (form && msg) {
+        form.addEventListener('submit', () => {
+            // We do NOT call e.preventDefault() here.
+            // We want the default mailto: action to proceed.
+            // But we will still show the feedback message.
+            form.classList.add('hidden');
+            msg.classList.remove('hidden');
+        });
+    }
 });
