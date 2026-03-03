@@ -19,9 +19,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Header & Nav */
+/* Header & Nav - Updated for image logo */
 header {
-    padding: 2rem 5%;
+    padding: 1.5rem 5%; /* Slightly reduced padding */
 }
 
 nav {
@@ -30,14 +30,15 @@ nav {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: -1px;
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 50px; /* Adjust height as needed */
 }
 
-.logo span {
-    color: var(--primary);
+.logo-img {
+    height: 100%; /* Make the image fill the link height */
+    width: auto; /* Maintain aspect ratio */
 }
 
 /* Hero Section */
